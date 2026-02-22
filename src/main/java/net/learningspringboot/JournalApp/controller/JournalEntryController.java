@@ -25,7 +25,6 @@ public class JournalEntryController {
     private JournalEntryService journalEntryService;
     @Autowired
     private UserService userService;
-    
 
     @GetMapping
     public ResponseEntity<?> getAllJournalEntryOfUser(){
