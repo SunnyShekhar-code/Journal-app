@@ -22,6 +22,7 @@ public class PublicController {
     public String healthCheck(){
         return "ok";
     }
+    
 
     @PostMapping("/create-user")
     public ResponseEntity<User> createEntry(@RequestBody User obj){
