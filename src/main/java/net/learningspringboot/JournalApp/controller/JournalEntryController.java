@@ -76,7 +76,6 @@ public class JournalEntryController {
             }else{
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
-        
     }
 
     @PutMapping("/id/{myId}")
