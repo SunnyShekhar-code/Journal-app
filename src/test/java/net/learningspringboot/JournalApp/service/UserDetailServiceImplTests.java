@@ -34,7 +34,6 @@
 //         MockitoAnnotations.initMocks(this);
 //     }
 
-
 //     @Test
 //     public void loadUserByUsernametest(){
 //         when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("ram")).build();
