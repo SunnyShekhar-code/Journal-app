@@ -40,7 +40,5 @@
 //         UserDetails user=userDetailsService.loadUserByUsername("ram");
 //         Assertions.assertNotNull(user);
 //     }
-
-
     
 // }
