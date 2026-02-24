@@ -10,10 +10,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import lombok.extern.slf4j.Slf4j;
 import net.learningspringboot.JournalApp.entity.User;
 import net.learningspringboot.JournalApp.repository.UserRepository;
 
 @Component
+@Slf4j
 public class UserService {
      @Autowired
     private UserRepository userRepository;
@@ -21,7 +23,13 @@ public class UserService {
     private static final PasswordEncoder passwordEncoder= new BCryptPasswordEncoder();
 
     public void saveUser(User user) {
-        userRepository.save(user); 
+        try{
+            userRepository.save(user); 
+            log.info("new user created");
+        }catch(Exception e){
+            log.error("Error occured for {} ",user.getUserName(),e);
+        }
+        
     }
 
     public void saveNewUser(User user) {
